@@ -1,5 +1,5 @@
 pkgname="entity"
-output="domain/entity"
+output="pkg/domain/entity"
 [mysql]
   dbname = "chat"
   host   = "localhost"
