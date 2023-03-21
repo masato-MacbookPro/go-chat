@@ -5,7 +5,7 @@ import (
 
 	"github.com/masato-MacbookPro/go-chat/pkg/adapter/response"
 	"github.com/masato-MacbookPro/go-chat/pkg/config"
-	"github.com/masato-MacbookPro/go-chat/pkg/infra"
+	"github.com/masato-MacbookPro/go-chat/pkg/infrastructure"
 )
 
 type healthCheckRespons struct {
@@ -15,7 +15,7 @@ type healthCheckRespons struct {
 
 func healthCheck(w http.ResponseWriter, r *http.Request) {
 	mysqlInfo := config.LoadConfig().MySQLInfo
-	_, err := infra.NewMySQLConnector(*mysqlInfo)
+	_, err := infrastructure.NewMySQLConnector(*mysqlInfo)
 	if err != nil {
 		rs := healthCheckRespons{
 			Message: "failed mysql connect",

@@ -2,6 +2,7 @@
 CREATE TABLE IF NOT EXISTS users (
     `id` BIGINT NOT NULL AUTO_INCREMENT, 
     `name` VARCHAR(30) NOT NULL,
+    `email` VARCHAR(319) NOT NULL,
     `created_at` DATETIME NOT NULL,
     `updated_at` DATETIME NOT NULL,
     PRIMARY KEY (`id`)
