@@ -21,12 +21,12 @@ func healthCheck(w http.ResponseWriter, r *http.Request) {
 			Message: "failed mysql connect",
 			Status:  http.StatusServiceUnavailable,
 		}
-		response.Write(w, rs, rs.Status)
+		response.Json(w, rs, rs.Status)
 		return
 	}
 	rs := healthCheckRespons{
 		Message: "server started!!!",
 		Status:  http.StatusOK,
 	}
-	response.Write(w, rs, rs.Status)
+	response.Json(w, rs, rs.Status)
 }

@@ -25,6 +25,7 @@ import (
 type User struct {
 	ID        int64     `boil:"id" json:"id" toml:"id" yaml:"id"`
 	Name      string    `boil:"name" json:"name" toml:"name" yaml:"name"`
+	Email     string    `boil:"email" json:"email" toml:"email" yaml:"email"`
 	CreatedAt time.Time `boil:"created_at" json:"created_at" toml:"created_at" yaml:"created_at"`
 	UpdatedAt time.Time `boil:"updated_at" json:"updated_at" toml:"updated_at" yaml:"updated_at"`
 
@@ -35,11 +36,13 @@ type User struct {
 var UserColumns = struct {
 	ID        string
 	Name      string
+	Email     string
 	CreatedAt string
 	UpdatedAt string
 }{
 	ID:        "id",
 	Name:      "name",
+	Email:     "email",
 	CreatedAt: "created_at",
 	UpdatedAt: "updated_at",
 }
@@ -47,11 +50,13 @@ var UserColumns = struct {
 var UserTableColumns = struct {
 	ID        string
 	Name      string
+	Email     string
 	CreatedAt string
 	UpdatedAt string
 }{
 	ID:        "users.id",
 	Name:      "users.name",
+	Email:     "users.email",
 	CreatedAt: "users.created_at",
 	UpdatedAt: "users.updated_at",
 }
@@ -105,11 +110,13 @@ func (w whereHelpertime_Time) GTE(x time.Time) qm.QueryMod {
 var UserWhere = struct {
 	ID        whereHelperint64
 	Name      whereHelperstring
+	Email     whereHelperstring
 	CreatedAt whereHelpertime_Time
 	UpdatedAt whereHelpertime_Time
 }{
 	ID:        whereHelperint64{field: "`users`.`id`"},
 	Name:      whereHelperstring{field: "`users`.`name`"},
+	Email:     whereHelperstring{field: "`users`.`email`"},
 	CreatedAt: whereHelpertime_Time{field: "`users`.`created_at`"},
 	UpdatedAt: whereHelpertime_Time{field: "`users`.`updated_at`"},
 }
@@ -131,9 +138,9 @@ func (*userR) NewStruct() *userR {
 type userL struct{}
 
 var (
-	userAllColumns            = []string{"id", "name", "created_at", "updated_at"}
-	userColumnsWithoutDefault = []string{"name", "created_at", "updated_at"}
-	userColumnsWithDefault    = []string{"id"}
+	userAllColumns            = []string{"id", "name", "email", "created_at", "updated_at"}
+	userColumnsWithoutDefault = []string{"name", "email"}
+	userColumnsWithDefault    = []string{"id", "created_at", "updated_at"}
 	userPrimaryKeyColumns     = []string{"id"}
 	userGeneratedColumns      = []string{}
 )

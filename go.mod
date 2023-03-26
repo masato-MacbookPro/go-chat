@@ -14,6 +14,8 @@ require (
 	github.com/volatiletech/strmangle v0.0.4
 )
 
+require github.com/gorilla/mux v1.8.0
+
 require (
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/gofrs/uuid v4.2.0+incompatible // indirect
