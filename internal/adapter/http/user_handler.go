@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/masato-MacbookPro/go-chat/pkg/adapter/response"
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/usecase"
+	"github.com/masato-MacbookPro/go-chat/internal/adapter/response"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/usecase"
 )
 
 // TODO: errorハンドリングを共通化する

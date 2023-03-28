@@ -4,9 +4,9 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/entity"
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/model"
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/repository"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/entity"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/model"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/repository"
 )
 
 type userRepositoryImpl struct {

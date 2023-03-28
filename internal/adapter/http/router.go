@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/usecase"
-	"github.com/masato-MacbookPro/go-chat/pkg/infrastructure/repositoryimpl"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/usecase"
+	"github.com/masato-MacbookPro/go-chat/internal/infrastructure/repositoryimpl"
 )
 
 func NewRouter(db *sql.DB) http.Handler {

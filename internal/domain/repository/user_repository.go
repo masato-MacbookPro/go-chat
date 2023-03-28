@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/model"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/model"
 )
 
 type UserRepostitory interface {

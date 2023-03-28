@@ -3,8 +3,8 @@ package usecase
 import (
 	"context"
 
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/model"
-	"github.com/masato-MacbookPro/go-chat/pkg/domain/repository"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/model"
+	"github.com/masato-MacbookPro/go-chat/internal/domain/repository"
 )
 
 type UserUsecase interface {

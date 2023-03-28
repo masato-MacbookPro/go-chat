@@ -3,9 +3,9 @@ package http
 import (
 	"net/http"
 
-	"github.com/masato-MacbookPro/go-chat/pkg/adapter/response"
-	"github.com/masato-MacbookPro/go-chat/pkg/config"
-	"github.com/masato-MacbookPro/go-chat/pkg/infrastructure"
+	"github.com/masato-MacbookPro/go-chat/internal/adapter/response"
+	"github.com/masato-MacbookPro/go-chat/internal/config"
+	"github.com/masato-MacbookPro/go-chat/internal/infrastructure"
 )
 
 type healthCheckRespons struct {

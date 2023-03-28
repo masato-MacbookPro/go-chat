@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	adapterHTTP "github.com/masato-MacbookPro/go-chat/pkg/adapter/http"
-	"github.com/masato-MacbookPro/go-chat/pkg/config"
-	"github.com/masato-MacbookPro/go-chat/pkg/infrastructure"
+	adapterHTTP "github.com/masato-MacbookPro/go-chat/internal/adapter/http"
+	"github.com/masato-MacbookPro/go-chat/internal/config"
+	"github.com/masato-MacbookPro/go-chat/internal/infrastructure"
 )
 
 func main() {
