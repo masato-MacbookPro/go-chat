@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/masato-MacbookPro/go-chat/internal/config"
+	"github.com/masato-MacbookPro/go-chat/internal/app/httpserver/config"
 )
 
 const driverName = "mysql"

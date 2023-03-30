@@ -1,10 +1,10 @@
-package http
+package handler
 
 import (
 	"net/http"
 
-	"github.com/masato-MacbookPro/go-chat/internal/adapter/response"
-	"github.com/masato-MacbookPro/go-chat/internal/config"
+	"github.com/masato-MacbookPro/go-chat/internal/app/httpserver/config"
+	"github.com/masato-MacbookPro/go-chat/internal/app/httpserver/presentation/response"
 	"github.com/masato-MacbookPro/go-chat/internal/infrastructure"
 )
 

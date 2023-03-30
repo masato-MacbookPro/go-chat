@@ -1,12 +1,12 @@
-package http
+package handler
 
 import (
 	"database/sql"
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/masato-MacbookPro/go-chat/internal/domain/usecase"
 	"github.com/masato-MacbookPro/go-chat/internal/infrastructure/repositoryimpl"
+	"github.com/masato-MacbookPro/go-chat/internal/usecase"
 )
 
 func NewRouter(db *sql.DB) http.Handler {

@@ -1,12 +1,12 @@
-package http
+package handler
 
 import (
 	"net/http"
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/masato-MacbookPro/go-chat/internal/adapter/response"
-	"github.com/masato-MacbookPro/go-chat/internal/domain/usecase"
+	"github.com/masato-MacbookPro/go-chat/internal/app/httpserver/presentation/response"
+	"github.com/masato-MacbookPro/go-chat/internal/usecase"
 )
 
 // TODO: errorハンドリングを共通化する
