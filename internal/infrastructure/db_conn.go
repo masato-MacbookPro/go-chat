@@ -10,27 +10,21 @@ import (
 
 const driverName = "mysql"
 
-type MySQLConnector struct {
-	Conn *sql.DB
-}
-
-func NewMySQLConnector(mysqlInfo config.MySQLInfo) (*MySQLConnector, error) {
+func NewMySQLConnector(mysqlInfo *config.MySQLInfo) (*sql.DB, error) {
 	dsn := mysqlConnInfo(mysqlInfo)
-	conn, err := sql.Open(driverName, dsn)
+	db, err := sql.Open(driverName, dsn)
 	if err != nil {
 		return nil, err
 	}
 
-	if err := conn.Ping(); err != nil {
+	if err := db.Ping(); err != nil {
 		return nil, err
 	}
 
-	return &MySQLConnector{
-		Conn: conn,
-	}, nil
+	return db, nil
 }
 
-func mysqlConnInfo(mysqlInfo config.MySQLInfo) string {
+func mysqlConnInfo(mysqlInfo *config.MySQLInfo) string {
 	dataSourceName := fmt.Sprintf("%s:%s@tcp(localhost:%s)/%s?parseTime=true&loc=Local",
 		mysqlInfo.MySqlUser,
 		mysqlInfo.MySqlPassWrord,

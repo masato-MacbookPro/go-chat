@@ -7,7 +7,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-type appConfig struct {
+type AppConfig struct {
 	HTTPInfo  *HTTPInfo
 	MySQLInfo *MySQLInfo
 }
@@ -23,7 +23,7 @@ type MySQLInfo struct {
 	MysqlDBName    string
 }
 
-func LoadConfig() *appConfig {
+func LoadConfig() *AppConfig {
 	err := godotenv.Load(".env")
 
 	if err != nil {
@@ -39,16 +39,16 @@ func LoadConfig() *appConfig {
 	mysqlAddr := os.Getenv("MYSQL_ADDR")
 	mysqlDBName := os.Getenv("MYSQL_DATABASE")
 
-	dbInfo := &MySQLInfo{
+	mysqlInfo := &MySQLInfo{
 		MySqlUser:      mysqlUser,
 		MySqlPassWrord: mysqlPassWord,
 		MysqlAddr:      mysqlAddr,
 		MysqlDBName:    mysqlDBName,
 	}
 
-	conf := &appConfig{
+	conf := &AppConfig{
 		HTTPInfo:  httpInfo,
-		MySQLInfo: dbInfo,
+		MySQLInfo: mysqlInfo,
 	}
 
 	return conf

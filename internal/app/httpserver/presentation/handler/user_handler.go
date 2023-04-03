@@ -15,17 +15,17 @@ type errorResponse struct {
 	Status  int    `json:"status"`
 }
 
-type userHandler struct {
+type UserHandler struct {
 	usecase usecase.UserUsecase
 }
 
-func NewUserHandler(uu usecase.UserUsecase) *userHandler {
-	return &userHandler{
+func NewUserHandler(uu usecase.UserUsecase) *UserHandler {
+	return &UserHandler{
 		usecase: uu,
 	}
 }
 
-func (uh *userHandler) GetUserByID(w http.ResponseWriter, r *http.Request) {
+func (uh *UserHandler) GetUserByID(w http.ResponseWriter, r *http.Request) {
 	const keyUserID = "user_id"
 
 	ctx := r.Context()

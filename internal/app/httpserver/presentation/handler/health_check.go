@@ -13,9 +13,9 @@ type healthCheckRespons struct {
 	Status  int    `json:"status"`
 }
 
-func healthCheck(w http.ResponseWriter, r *http.Request) {
+func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	mysqlInfo := config.LoadConfig().MySQLInfo
-	_, err := infrastructure.NewMySQLConnector(*mysqlInfo)
+	_, err := infrastructure.NewMySQLConnector(mysqlInfo)
 	if err != nil {
 		rs := healthCheckRespons{
 			Message: "failed mysql connect",
