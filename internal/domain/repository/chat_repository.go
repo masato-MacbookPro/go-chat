@@ -6,6 +6,6 @@ import (
 	"github.com/masato-MacbookPro/go-chat/internal/domain/model"
 )
 
-type UserRepostitory interface {
+type ChatRepostitory interface {
 	GetUserByID(ctx context.Context, id int) (*model.User, error)
 }

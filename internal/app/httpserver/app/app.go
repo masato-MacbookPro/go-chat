@@ -10,12 +10,12 @@ import (
 
 type App struct {
 	cfg     *config.AppConfig
-	handler *handler.UserHandler
+	handler *handler.ChatHandler
 }
 
 func NewApp(
 	cfg *config.AppConfig,
-	handler *handler.UserHandler,
+	handler *handler.ChatHandler,
 ) *App {
 	return &App{
 		cfg:     cfg,

@@ -19,8 +19,8 @@ func InitializeApp() (*app.App, error) {
 		config.LoadConfig,
 		wire.FieldsOf(new(*config.AppConfig), "MySQLInfo"),
 		infrastructure.NewMySQLConnector,
-		handler.NewUserHandler,
-		usecase.NewUserUsecase,
+		handler.NewChatHandler,
+		usecase.NewChatUsecase,
 		repositoryimpl.NewUserRepositoryImpl,
 	)
 	return nil, nil

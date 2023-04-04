@@ -24,9 +24,9 @@ func InitializeApp() (*app.App, error) {
 	if err != nil {
 		return nil, err
 	}
-	userRepostitory := repositoryimpl.NewUserRepositoryImpl(db)
-	userUsecase := usecase.NewUserUsecase(userRepostitory)
-	userHandler := handler.NewUserHandler(userUsecase)
-	appApp := app.NewApp(appConfig, userHandler)
+	chatRepostitory := repositoryimpl.NewUserRepositoryImpl(db)
+	chatUsecase := usecase.NewChatUsecase(chatRepostitory)
+	chatHandler := handler.NewChatHandler(chatUsecase)
+	appApp := app.NewApp(appConfig, chatHandler)
 	return appApp, nil
 }
